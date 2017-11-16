@@ -7,11 +7,11 @@
     <th>URL</th>
     <th>TAG</th>
   </tr>
-<% links.each do |link| %>
+<% @links.each do |link| %>
 <tr>
-<td><%= link.name %></td>
+<td><%= link.title %></td>
 <td><%= link.url %></td>
-<td><%= link.tag %></td>
-</tr>
+  <td><%= link.tags.map(&:name) %></td>
   <% end %>
+</tr>
 </table>
